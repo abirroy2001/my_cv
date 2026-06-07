@@ -17,7 +17,7 @@ body {
 .portfolio {
   max-width: 1300px;
   margin: auto;
-  padding: clamp(10px, 3vw, 30px);
+  padding: 30px;
 }
 
 /* =========================
@@ -27,87 +27,70 @@ body {
 .hero {
   display: flex;
   align-items: center;
-  gap: clamp(20px, 4vw, 50px);
-  padding: clamp(20px, 5vw, 50px);
-  border-radius: clamp(15px, 3vw, 25px);
+  gap: 50px;
+  padding: 50px;
+  border-radius: 25px;
   background: linear-gradient(135deg, #4b75cf);
   color: white;
   box-shadow: 0 15px 40px rgba(37, 99, 235, 0.25);
-  flex-wrap: wrap;
 }
 
 .profile-pic {
-  width: clamp(100px, 20vw, 240px);
-  height: clamp(100px, 20vw, 240px);
+  width: 240px;
+  height: 240px;
   border-radius: 50%;
   object-fit: cover;
   border: 6px solid white;
-  flex-shrink: 0;
-  margin: 0 auto;
 }
 
 .hero-right {
   flex: 1;
-  min-width: 200px;
 }
 
 .hero-right h1 {
-  font-size: clamp(24px, 5vw, 55px);
+  font-size: 55px;
   margin-bottom: 10px;
   color: white;
-  line-height: 1.2;
 }
 
 .hero-right h2 {
   color: #dbeafe;
   margin-bottom: 15px;
-  font-size: clamp(16px, 2.5vw, 24px);
 }
 
 .hero-right p {
   color: white;
   line-height: 1.8;
-  font-size: clamp(14px, 1.8vw, 16px);
 }
 
 .contact {
   display: flex;
-  gap: 10px;
+  gap: 15px;
   margin-top: 20px;
   flex-wrap: wrap;
 }
 
 .contact span {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 8px 14px;
+  background: rgba(255,255,255,.2);
+  padding: 10px 15px;
   border-radius: 10px;
   color: white;
-  font-size: clamp(12px, 1.5vw, 15px);
-  min-height: 44px;
-  display: flex;
-  align-items: center;
 }
 
 .buttons {
   margin-top: 25px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
 }
 
 .buttons a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   text-decoration: none;
   background: white;
   color: #2563eb;
   padding: 12px 22px;
   border-radius: 30px;
+  margin-right: 10px;
   font-weight: bold;
-  transition: 0.3s;
-  min-height: 44px;
-  font-size: clamp(13px, 1.5vw, 15px);
+  transition: .3s;
 }
 
 .buttons a:hover {
@@ -119,12 +102,12 @@ body {
 ========================= */
 
 .section {
-  margin-top: clamp(30px, 5vw, 50px);
+  margin-top: 50px;
 }
 
 .section h2 {
   color: #1657db;
-  font-size: clamp(20px, 3.5vw, 32px);
+  font-size: 32px;
   margin-bottom: 20px;
   border-left: 5px solid #2563eb;
   padding-left: 15px;
@@ -138,10 +121,10 @@ body {
   background: #ffffff;
   border: 1px solid #dbeafe;
   border-radius: 20px;
-  padding: clamp(16px, 3vw, 25px);
+  padding: 25px;
   margin-bottom: 20px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-  transition: 0.3s;
+  box-shadow: 0 5px 20px rgba(0,0,0,.05);
+  transition: .3s;
 }
 
 .card:hover {
@@ -151,30 +134,24 @@ body {
 .card h3 {
   color: #000;
   margin-bottom: 10px;
-  font-size: clamp(15px, 2vw, 18px);
 }
 
 .card h4 {
   color: #000;
   margin-bottom: 15px;
-  font-size: clamp(14px, 1.8vw, 16px);
 }
 
 .card p,
 .card li {
   color: #000000;
   line-height: 1.8;
-  font-size: clamp(13px, 1.5vw, 15px);
 }
-
 .experience-header {
   display: flex;
+  /* flex-direction: column; */
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 8px;
-  flex-wrap: wrap;
+  gap: 5px;
 }
-
 .card ul {
   margin-left: 20px;
 }
@@ -185,17 +162,17 @@ body {
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
 .project-card {
-  background: linear-gradient(135deg, #18397e);
+   background: linear-gradient(135deg, #18397e);
+
   color: white;
-  padding: clamp(18px, 3vw, 25px);
+  padding: 25px;
   border-radius: 20px;
-  transition: 0.3s;
-  cursor: pointer;
+  transition: .3s;
 }
 
 .project-card:hover {
@@ -205,42 +182,29 @@ body {
 .project-card h3 {
   margin-bottom: 10px;
   color: white;
-  font-size: clamp(15px, 2vw, 18px);
 }
 
 .project-card p {
   color: white;
-  font-size: clamp(13px, 1.5vw, 15px);
-  line-height: 1.7;
 }
 
 /* =========================
-   SKILLS GRID
+   SKILLS
 ========================= */
 
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: clamp(12px, 2vw, 20px);
+  gap: 20px;
 }
-
-/* =========================
-   SKILL CARD
-========================= */
 
 .skill-card {
   background: white;
   border: 1px solid #dbeafe;
   border-radius: 15px;
-  padding: clamp(14px, 2.5vw, 25px) clamp(8px, 1.5vw, 15px);
+  padding: 25px;
   text-align: center;
-  transition: 0.3s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  min-height: 110px;
+  transition: .3s;
 }
 
 .skill-card:hover {
@@ -248,49 +212,68 @@ body {
   background: #eff6ff;
 }
 
-/* Icon — works for both react-icons SVGs and font icons */
 .skill-icon {
-  width: clamp(32px, 5vw, 42px) !important;
-  height: clamp(32px, 5vw, 42px) !important;
-  font-size: clamp(32px, 5vw, 42px);
-  display: block;
-  flex-shrink: 0;
-  transition: transform 0.3s;
+  font-size: 42px;
+  margin-bottom: 12px;
+  transition: 0.3s;
 }
+
+/* Official Colors */
+
+.react {
+  color: #61dafb;
+}
+
+.angular {
+  color: #dd0031;
+}
+
+.node {
+  color: #68a063;
+}
+
+.express {
+  color: #000000;
+}
+
+.mongodb {
+  color: #47a248;
+}
+
+.javascript {
+  color: #f7df1e;
+}
+
+.typescript {
+  color: #3178c6;
+}
+
+.html {
+  color: #e34f26;
+}
+
+.css {
+  color: #1572b6;
+}
+
+.git {
+  color: #f05032;
+}
+
+.github {
+  color: #181717;
+}
+
+.java {
+  color: #f89820;
+}
+
+
+/* Hover Effect */
 
 .skill-card:hover .skill-icon {
   transform: scale(1.15);
 }
-
-/* Label — targets both <span> and <p> */
-.skill-card span,
-.skill-card p {
-  font-size: clamp(11px, 1.3vw, 14px);
-  font-weight: 600;
-  color: #111827;
-  line-height: 1.3;
-  word-break: break-word;
-  hyphens: auto;
-}
-
-/* Official Brand Colors */
-.react     { color: #61dafb; }
-.angular   { color: #dd0031; }
-.node      { color: #68a063; }
-.express   { color: #000000; }
-.mongodb   { color: #47a248; }
-.javascript{ color: #f7df1e; }
-.typescript{ color: #3178c6; }
-.html      { color: #e34f26; }
-.css       { color: #1572b6; }
-.git       { color: #f05032; }
-.github    { color: #181717; }
-.java      { color: #f89820 !important; }
-.python    { color: #3776ab !important; }
-.c-lang    { color: #00599c !important; }
-.dsa       { color: #ffa116 !important; }
-.oop       { color: #8b5cf6 !important; }
-.dbms      { color: #2563eb !important; }
 
 /* =========================
    EDUCATION
@@ -300,7 +283,7 @@ body {
   background: white;
   border: 1px solid #dbeafe;
   border-radius: 20px;
-  padding: clamp(16px, 3vw, 25px);
+  padding: 25px;
   margin-bottom: 20px;
 }
 
@@ -308,210 +291,138 @@ body {
    SCROLLBAR
 ========================= */
 
-::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar {
+  width: 8px;
+}
+
 ::-webkit-scrollbar-thumb {
   background: #2563eb;
   border-radius: 10px;
 }
 
-/* =========================
-   MODAL
-========================= */
+
+/* Modal Overlay */
 
 .modal-overlay {
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,.7);
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   z-index: 9999;
-  padding: 16px;
 }
 
+/* Modal Box */
+
 .modal-content {
-  width: 100%;
+  width: 90%;
   max-width: 600px;
+
   background: #dafcff;
-  padding: clamp(20px, 4vw, 35px);
+
+  padding: 35px;
+
   border-radius: 20px;
+
   position: relative;
-  animation: popup 0.3s ease;
-  max-height: 90vh;
-  overflow-y: auto;
+
+  animation: popup .3s ease;
 }
 
 @keyframes popup {
-  from { transform: scale(0.8); opacity: 0; }
-  to   { transform: scale(1);   opacity: 1; }
+  from {
+    transform: scale(.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .modal-content h2 {
   color: #2563eb;
   margin-bottom: 20px;
-  font-size: clamp(18px, 3vw, 24px);
-  padding-right: 36px;
 }
 
 .modal-content p {
   color: #111827;
   line-height: 1.8;
   margin-bottom: 25px;
-  font-size: clamp(13px, 1.5vw, 15px);
 }
+
+/* Close Button */
 
 .close-btn {
   position: absolute;
-  top: 15px; right: 15px;
+  top: 15px;
+  right: 15px;
+
   border: none;
   background: none;
+
   font-size: 22px;
   cursor: pointer;
-  width: 44px; height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  transition: background 0.2s;
 }
 
-.close-btn:hover { background: rgba(0, 0, 0, 0.08); }
+/* View Project Button */
 
 .project-btn {
-  display: inline-flex;
-  align-items: center;
+  display: inline-block;
+
   background: #2563eb;
   color: white;
+
   text-decoration: none;
+
   padding: 12px 25px;
+
   border-radius: 10px;
+
   font-weight: 600;
-  min-height: 44px;
-  font-size: clamp(13px, 1.5vw, 15px);
 }
 
-.project-btn:hover { background: #1d4ed8; }
-
+.project-btn:hover {
+  background: #1d4ed8;
+}
 /* =========================
-   RESPONSIVE — LARGE TABLET
-   ≤ 1024px  →  3 columns
+   MOBILE + TABLET
+   KEEP DESKTOP LOOK
 ========================= */
 
 @media (max-width: 1024px) {
-  .hero {
-    justify-content: center;
-    text-align: center;
-  }
 
-  .contact { justify-content: center; }
-  .buttons { justify-content: center; }
-
-  .experience-header {
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  .skills-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* =========================
-   RESPONSIVE — TABLET
-   ≤ 768px  →  2 columns
-========================= */
-
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .contact {
-    justify-content: center;
-  }
-
-  .buttons {
-    justify-content: center;
-  }
-
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .projects {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* =========================
-   RESPONSIVE — MOBILE
-   ≤ 480px  →  2 columns (skill), full-width contact/buttons
-========================= */
-
-@media (max-width: 480px) {
-  .hero {
-    padding: 20px 15px;
-  }
-
-  .contact {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .contact span {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .buttons {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .buttons a {
-    width: 100%;
-  }
-
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-  }
-
-  .skill-card {
-    min-height: 90px;
-    padding: 12px 8px;
-    gap: 8px;
-  }
-
-  .experience-header {
-    flex-direction: column;
-    gap: 4px;
-  }
-}
-
-/* =========================
-   RESPONSIVE — SMALL MOBILE
-   ≤ 360px  →  2 columns still, tighter
-========================= */
-
-@media (max-width: 360px) {
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-  }
-
-  .skill-card span,
-  .skill-card p {
-    font-size: 10px;
+  .portfolio {
+    padding: 20px;
   }
 
   .hero {
-    border-radius: 12px;
+    gap: 30px;
+    padding: 30px;
   }
 
   .profile-pic {
-    border-width: 4px;
+    width: 180px;
+    height: 180px;
+  }
+
+  .hero-right h1 {
+    font-size: 42px;
+  }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
