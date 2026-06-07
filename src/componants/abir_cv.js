@@ -19,8 +19,7 @@ import {
     SiMongodb,
     SiExpress,
     SiJavascript,
-    SiTypescript,
-    SiReact
+    SiTypescript
 } from "react-icons/si";
 const projects = [
     {
