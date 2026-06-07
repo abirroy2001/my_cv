@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import AbirCv from "./abir_cv";
+import AbirCv from "./componants/abir_cv";
 import Qr from "./componants/qr";
 
 function App() {
