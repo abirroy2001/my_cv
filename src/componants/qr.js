@@ -4,7 +4,7 @@ function Qr() {
   return (
     <div>
       <QRCodeCanvas
-        value="https://your-domain.vercel.app/cv"
+        value="https://my-cv-beta-navy.vercel.app/cv"
         size={200}
       />
     </div>
