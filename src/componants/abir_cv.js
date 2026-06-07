@@ -1,5 +1,5 @@
 import React from "react";
-impor t "./abir_cv.css";
+import "./css/abir_cv.css";
 function AbirCv() {
     return (
         <div className="section">
