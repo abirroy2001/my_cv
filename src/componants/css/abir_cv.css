@@ -13,3 +13,161 @@
   font-size: 13px;
   font-weight: 600;
 }
+/* =========================
+   Small Phones
+   ========================= */
+@media screen and (max-width: 480px) {
+
+  .portfolio {
+    padding: 15px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px 15px;
+    gap: 20px;
+  }
+
+  .profile-pic {
+    width: 140px;
+    height: 140px;
+  }
+
+  .hero-right h1 {
+    font-size: 28px;
+  }
+
+  .hero-right h2 {
+    font-size: 18px;
+  }
+
+  .hero-right p {
+    font-size: 14px;
+  }
+
+  .contact {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .buttons a {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .skills {
+    justify-content: center;
+  }
+
+  .skills span {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .section h2 {
+    font-size: 22px;
+  }
+}
+
+
+/* =========================
+   Large Phones
+   ========================= */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+
+  .portfolio {
+    padding: 20px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-pic {
+    width: 170px;
+    height: 170px;
+  }
+
+  .hero-right h1 {
+    font-size: 34px;
+  }
+
+  .hero-right h2 {
+    font-size: 20px;
+  }
+
+  .contact {
+    justify-content: center;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+
+/* =========================
+   Tablets
+   ========================= */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .portfolio {
+    padding: 25px;
+  }
+
+  .hero {
+    gap: 25px;
+  }
+
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+  }
+
+  .hero-right h1 {
+    font-size: 40px;
+  }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills {
+    justify-content: center;
+  }
+}
+
+
+/* =========================
+   Large Screens
+   ========================= */
+@media screen and (min-width: 1025px) {
+
+  .portfolio {
+    max-width: 1200px;
+  }
+
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
