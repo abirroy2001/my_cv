@@ -23,14 +23,29 @@ body {
 /* =========================
    HERO SECTION
 ========================= */
+.dynamic-text {
+  color: #fff;
+  font-weight: 700;
+  margin-left: 8px;
+}
 
+.dynamic-text::after {
+  content: "|";
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
 .hero {
   display: flex;
   align-items: center;
   gap: 50px;
   padding: 50px;
   border-radius: 25px;
-  background: linear-gradient(135deg, #4b75cf);
+  background: linear-gradient(135deg, #002168);
   color: white;
   box-shadow: 0 15px 40px rgba(37, 99, 235, 0.25);
 }

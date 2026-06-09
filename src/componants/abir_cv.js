@@ -1,4 +1,5 @@
-import React, { useState } from "react"; import "./css/abir_cv.css";
+import React, { useState, useEffect } from "react";
+import "./css/abir_cv.css";
 import profilePic from "./images/abir_roy.jpeg";
 import {
     FaReact,
@@ -41,17 +42,57 @@ const projects = [
         tools: "React, Node.js, Express, MongoDB",
         description:
             "It all started with a simple observation: payroll shouldn’t be this hard. As business owners and professionals, we saw countless companies — especially small and medium enterprises — struggling every month with salary calculations, compliance filings, and government regulations that changed from one state to another. Errors, delays, and penalties were common. The available tools were too complex, too expensive, or simply not made for the Indian market. That’s when we decided to create SalaryBooks.",
-        link: "https://your-project-link.com"
+        link: "https://salarybooks.com/"
     },
     {
         title: "AI Chat Bot",
         tools: "Python, NLP",
         description:
             "Built an AI chatbot using Python and NLP techniques, with support for intelligent conversation flow,context understanding, and automated user interaction.",
-        link: "https://your-project-link.com"
+        link: "https://github.com/abirroy2001/ChatBot"
     }
 ];
 function AbirCv() {
+    const words = [
+        "1+ Year Experience",
+        "Angular",
+        "React",
+        "React Native",
+        "Node.js",
+        "MongoDB",
+    ];
+
+
+    const [wordIndex, setWordIndex] = useState(0);
+    const [displayText, setDisplayText] = useState("");
+    const [isDeleting, setIsDeleting] = useState(false);
+
+    useEffect(() => {
+        const currentWord = words[wordIndex];
+
+        const timeout = setTimeout(() => {
+            if (!isDeleting) {
+
+                setDisplayText(currentWord.substring(0, displayText.length + 1));
+
+                if (displayText === currentWord) {
+                    setTimeout(() => {
+                        setIsDeleting(true);
+                    }, 400);
+                }
+            } else {
+
+                setDisplayText(currentWord.substring(0, displayText.length - 1));
+
+                if (displayText === "") {
+                    setIsDeleting(false);
+                    setWordIndex((prev) => (prev + 1) % words.length);
+                }
+            }
+        }, isDeleting ? 70 : 120);
+
+        return () => clearTimeout(timeout);
+    }, [displayText, isDeleting, wordIndex]);
     const [selectedProject, setSelectedProject] = useState(null);
     return (
         <div className="portfolio">
@@ -64,11 +105,13 @@ function AbirCv() {
 
                 <div className="hero-right">
                     <h1>ABIR ROY</h1>
-                    <h2>Software Developer |  1+ Year Experience</h2>
-
+                    <h2>
+                        Software Developer |
+                        <span className="dynamic-text">{displayText}</span>
+                    </h2>
                     <div className="contact">
                         <span>📞 +91 8967054672</span>
-                        <span>✉️ abirroyroy2020@gmail.com</span>
+                        <span>✉️ abirroyroyroy2020@gmail.com</span>
                     </div>
 
                     <div className="buttons">
