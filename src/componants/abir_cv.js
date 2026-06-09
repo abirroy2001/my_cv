@@ -52,8 +52,7 @@ const projects = [
         link: "https://github.com/abirroy2001/ChatBot"
     }
 ];
-function AbirCv() {
-    const words = [
+const words = [
         "1+ Year Experience",
         "Angular",
         "React",
@@ -61,6 +60,8 @@ function AbirCv() {
         "Node.js",
         "MongoDB",
     ];
+function AbirCv() {
+    
 
 
     const [wordIndex, setWordIndex] = useState(0);
